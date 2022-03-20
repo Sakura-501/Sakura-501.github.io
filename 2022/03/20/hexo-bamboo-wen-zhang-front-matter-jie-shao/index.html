@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>建站历程 | Sakura501</title>
+  <title>hexo-bamboo文章Front-matter介绍 | Sakura501</title>
 
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/kkk.ico">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -657,14 +657,14 @@
 
 
 <div class="post-detail-header" id="thumbnail_canvas" style="background-repeat: no-repeat; background-size: cover; 
-  background-position: center center;position: relative;background-image:url('/medias/1/2.jpg')">
+  background-position: center center;position: relative;background-image:url('/medias/1/3.jpg')">
   <div class="post-detail-header-mask"></div>
   <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
   
   <div class="post-detail-header_info-box">
     <div class="title-box">
       <span class="title">
-        建站历程
+        hexo-bamboo文章Front-matter介绍
       </span>
     </div>
     
@@ -679,8 +679,8 @@
         <span class="post-detail-header_categories">
           <i class="iconfont iconbookmark1"></i> 分类：
           
-            <a href="/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/" class="post-detail-header_category">
-              碎碎念
+            <a href="/categories/bamboo/" class="post-detail-header_category">
+              bamboo
             </a>
           
         </span>
@@ -689,11 +689,11 @@
       
         <div class="post-detail-header_wordcount">
           <span class="totalcount">
-            <i class="fas fa-file-text-o"></i> 字数统计: 314 |
+            <i class="fas fa-file-text-o"></i> 字数统计: 875 |
           </span>
   
           <span class="min2read">
-            <i class="fas fa-clock"></i> 阅读时长: 1分钟 |
+            <i class="fas fa-clock"></i> 阅读时长: 3分钟 |
           </span>
   
           
@@ -720,21 +720,161 @@
   <div class="main-content">
     <article class="post post-detail">
       <div class="post-content">
-        <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>算是拖了很久很久的事情了，大一就想要自己建个小站了，但是一直没有没有花时间去学习，这次下决心周末把他初步建完。经过这几天的实践，感觉建站真的挺不容易的（可能就是我菜）。本次建站花了两三天吧，都差不多是利用晚上的时间，晚上会熬到两点才去睡觉，终于算是初步完成。这次选用的是hexo进行搭建的博客，使用了yuong大佬的<a target="_blank" rel="noopener" href="https://yuang01.gitee.io/">bamboo</a>主题，还算可以，有着丰富的功能，大佬也写了详细的新手教程，尽管不太完善，有些需要自己探索完成。  </p>
-<p>说是自己搭建，其实就是下了个模板对着调整，说实话这个调整参数耗费了我不少时间，大部分时间就是在调整主题上面了。。。。使用hexo写博客，还得去学学markdown的语法（要不另外起一片文章记录markdown的语法吧）。  </p>
-<p>好像没什么好说的了，希望搭了这个博客之后，有时间就来写点东西吧，一个web手到现在还什么都大不会o(╥﹏╥)o。继续学习吧！</p>
+        <h1 id="文章Front-matter介绍"><a href="#文章Front-matter介绍" class="headerlink" title="文章Front-matter介绍"></a>文章Front-matter介绍</h1><p>这个front-matter指的就是你文章写在最前面的那些参数，只针对这篇文章，下面的是hexo主题bamboo的参数，如下：  </p>
+<pre class="line-numbers language-none"><code class="language-none">---
+title: Hexo主题--Bamboo介绍
+date: 2020-09-14 14:06
+swiper: true # 将改文章放入轮播图中
+swiperImg: &#39;&#x2F;medias&#x2F;1.jpg&#39; # 该文章在轮播图中的图片，可以是本地目录下图片也可以是http:&#x2F;&#x2F;xxx图片
+swiperDesc: &#39;文章的front-matter编辑&#39;
+img: &#39;&#x2F;medias&#x2F;1.jpg&#39; # 该文章图片，可以是本地目录下图片也可以是http:&#x2F;&#x2F;xxx图片
+categories: 前端
+tags: [Hexo, hexo-theme-bamboo]
+top: true
+---<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><code>Front-matter</code> 选项中的所有内容均为<strong>非必填</strong>的。但我仍然建议至少填写 <code>title</code> 和 <code>date</code> 的值。</p>
+<table>
+<thead>
+<tr>
+<th align="left">配置选项</th>
+<th align="left">默认值</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">title</td>
+<td align="left"><code>Markdown</code> 的文件标题</td>
+<td align="left">文章标题，强烈建议填写此选项</td>
+</tr>
+<tr>
+<td align="left">date</td>
+<td align="left">文件创建时的日期时间</td>
+<td align="left">发布时间，强烈建议填写此选项，且最好保证全局唯一</td>
+</tr>
+<tr>
+<td align="left">swiper</td>
+<td align="left">false</td>
+<td align="left">表示该文章是否需要加入到首页轮播封面中</td>
+</tr>
+<tr>
+<td align="left">swiperImg</td>
+<td align="left">无</td>
+<td align="left">表示该文章在首页轮播封面需要显示的图片路径，如果没有，则默认使用文章的特色图片</td>
+</tr>
+<tr>
+<td align="left">swiperDesc</td>
+<td align="left">无</td>
+<td align="left">表示该文章在首页轮播封面需要显示的文字描述（摘要），如果没有，则使用<code>excerpt</code>，如果<code>excerpt</code>也没有，则取文章内容</td>
+</tr>
+<tr>
+<td align="left">img</td>
+<td align="left">无</td>
+<td align="left">文章特征图，该文章显示的图片，没有则默认使用文章的特色图片</td>
+</tr>
+<tr>
+<td align="left">excerpt</td>
+<td align="left">无</td>
+<td align="left">文章描述（摘要），该文章在首页的描述文字，如果没有，则取<code>swiperDesc</code>,如果<code>swiperDesc</code>也没有，则取文章内容（优先取<code>&lt;!-- more --&gt;</code>上面的内容）</td>
+</tr>
+<tr>
+<td align="left">top</td>
+<td align="left">false</td>
+<td align="left">将该值设为true，则将该篇文章显示在首页的置顶栏目中</td>
+</tr>
+<tr>
+<td align="left">toc</td>
+<td align="left">true</td>
+<td align="left">将该值设为false，则该篇文章不显示右侧目录</td>
+</tr>
+<tr>
+<td align="left">tocOpen</td>
+<td align="left">true</td>
+<td align="left">将该值设为false，则该篇文章右侧目录默认收缩</td>
+</tr>
+<tr>
+<td align="left">onlyTitle</td>
+<td align="left">false</td>
+<td align="left">文章详情页头部是否只显示标题，不显示日期等信息</td>
+</tr>
+<tr>
+<td align="left">comments</td>
+<td align="left">true</td>
+<td align="left">将该值设为false，则该篇文章不显示评论</td>
+</tr>
+<tr>
+<td align="left">share</td>
+<td align="left">true</td>
+<td align="left">将该值设为false，则该篇文章不显示分享按钮</td>
+</tr>
+<tr>
+<td align="left">copyright</td>
+<td align="left">true</td>
+<td align="left">将该值设为false，则该篇文章不显示版权声明</td>
+</tr>
+<tr>
+<td align="left">donate</td>
+<td align="left">true</td>
+<td align="left">将该值设为false，则该篇文章不显示打赏按钮</td>
+</tr>
+<tr>
+<td align="left">bgImg</td>
+<td align="left">-</td>
+<td align="left">单独为这篇文章设置背景图片或者背景颜色，可以是数组，数组里面放图片链接，可以是字符串，字符串里面是颜色值，空值则背景颜色透明</td>
+</tr>
+<tr>
+<td align="left">bgImgTransition</td>
+<td align="left">fade</td>
+<td align="left">该篇文章的bgImg设置为数组,该值表示背景图片切换的动画, 有三种值（fade, scale, translate-fade）</td>
+</tr>
+<tr>
+<td align="left">bgImgDelay</td>
+<td align="left">180000(三分钟)</td>
+<td align="left">该篇文章的bgImg设置为数组,该值表示背景图片切换的延迟时间,</td>
+</tr>
+<tr>
+<td align="left">categories</td>
+<td align="left">无</td>
+<td align="left">文章分类，本主题的分类表示宏观上大的分类，只建议一篇文章一个分类</td>
+</tr>
+<tr>
+<td align="left">prismjs</td>
+<td align="left">无</td>
+<td align="left">如果使用的是hexo自带的prismjs代码高亮，通过设置该值为该篇文章设置不同的代码高亮主题（default, coy, dark, funky, okaidia, solarizedlight, tomorrow, twilight）</td>
+</tr>
+<tr>
+<td align="left">tags</td>
+<td align="left">无</td>
+<td align="left">文章标签，一篇文章可以多个标签</td>
+</tr>
+<tr>
+<td align="left">mathjax</td>
+<td align="left">false</td>
+<td align="left">mathjax公式</td>
+</tr>
+<tr>
+<td align="left">imgTop</td>
+<td align="left">true</td>
+<td align="left">设置为<code>false</code>则文章和自定义页面顶部不要图片</td>
+</tr>
+</tbody></table>
+<p>果然做<code>搬运工</code>非常舒适，直接搬了<code>yuang大佬</code>的，方便自己以后查看！</p>
 
       </div>
       <div class="post-tags-categories">
         
         <div class="tags">
           
-            <a href="/tags/%E5%BB%BA%E7%AB%99/" class="">
-              建站
+            <a href="/tags/hexo/" class="">
+              hexo
             </a>
           
-            <a href="/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/" class="">
-              碎碎念
+            <a href="/tags/bamboo/" class="">
+              bamboo
+            </a>
+          
+            <a href="/tags/front-matter/" class="">
+              front-matter
             </a>
           
         </div>
@@ -748,7 +888,7 @@
     </li>
     <li class="post-copyright-link">
     <strong>文章链接:  </strong>
-    <a href="/2022/03/20/jian-zhan-li-cheng/" target="_blank" title="建站历程">http://sakura-501.github.io/2022/03/20/jian-zhan-li-cheng/</a>
+    <a href="/2022/03/20/hexo-bamboo-wen-zhang-front-matter-jie-shao/" target="_blank" title="hexo-bamboo文章Front-matter介绍">http://sakura-501.github.io/2022/03/20/hexo-bamboo-wen-zhang-front-matter-jie-shao/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明:   </strong>
@@ -766,39 +906,21 @@
 
 
 
-  
-  <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img" style="background-size: cover; 
-      background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="/medias/1/3.jpg" class="lazyload placeholder" data-srcset="/medias/1/3.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
-    </div>
-    <a href="/2022/03/20/hexo-bamboo-wen-zhang-front-matter-jie-shao/" class="post-nav-link">
-      <div class="title">
-        <i class="fas fa-angle-left"></i> 上一篇:
-        <div class="title-text">hexo-bamboo文章Front-matter介绍</div>
-      </div>
-      
-      <!-- <div class="content">
-        文章Front-matter介绍这个front-matter指的就是你文章写在最前面的那些参数，只针对这篇文章，下面的是
-      </div> -->
-    </a>
-  </div>
-
 
 
   
   <div class="post-nav-next post-nav-item">
     <div class="post-nav-img" style="background-size: cover; 
       background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="/medias/r-1.jpg" class="lazyload placeholder" data-srcset="/medias/r-1.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" src="" alt="">
+      <img class="lazyload lazyload placeholder" src="/medias/1/2.jpg" class="lazyload placeholder" data-srcset="/medias/1/2.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" src="" alt="">
     </div>
-    <a href="/2022/03/18/hello-world/" class="post-nav-link">
+    <a href="/2022/03/20/jian-zhan-li-cheng/" class="post-nav-link">
       <div class="title">
         下一篇: <i class="fas fa-angle-right"></i>
-        <div class="title-text">Hello World</div>
+        <div class="title-text">建站历程</div>
       </div>
       <!-- <div class="content">
-        Welcome to Hexo! This is your very first post. Check documen
+        写在前面算是拖了很久很久的事情了，大一就想要自己建个小站了，但是一直没有没有花时间去学习，这次下决心周末把他初步建完。经
       </div> -->
     </a>
   </div>
