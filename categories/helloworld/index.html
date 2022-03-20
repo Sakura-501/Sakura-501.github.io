@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>标签 | Sakura501</title>
+  <title>分类: helloworld | Sakura501</title>
 
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/kkk.ico">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -625,20 +625,21 @@
 </header>
         <!-- 内容区域 -->
         
-<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
-<div class="bg-light-floor-tags" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -3;"></div>
 
-<div class="tags-header" style="background-image:url('https://pic2.zhimg.com/80/v2-bf6c555e7c61a57ba4a1fd95a9a32975_1440w.jpg')">
-    <div class="tags-header-title">
-        tags
-    </div>
-    <div class="tags-header-desc">
+<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
+<div class="bg-light-floor-categoryDetail" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -3;"></div>
+
+<div class="category-header"  style="background-image:url('https://pic3.zhimg.com/80/v2-98dcd81cb0d1fee52a807c13cedb8338_1440w.jpg?source=1940ef5c')">
+  <div class="category-header-title">
+    category
+  </div>
+  <div class="category-header-desc">
     
-        <span class="title" id="tags-header-desc"></span>
-        <script>
+      <span class="title" id="category-header-desc"></span>
+      <script>
   function typedFn() {
-    const el = '#tags-header-desc';
-    const type = 'tag';
+    const el = '#category-header-desc';
+    const type = 'categoryDetail';
     let desc = '愿你如风，被人温柔以待'
     var typed = new Typed(el, {
       strings: [desc],
@@ -651,39 +652,79 @@
   }
   typedFn();
 </script>
-    
-    </div>
-    <div class="mask-box"></div>
+      
+  </div>
+  <div class="mask-box"></div>
 </div>
 
 
-<div id="tags" class="container">
-    <div class="card">
-        <div class="card-content">
-            <div class="tag-title center-align">
-                <i class="fas fa-tags"></i>&nbsp;&nbsp;文章标签
+<div class="category">
+  <div class="category-name">
+    <div class="name" style="background-color: #A3E4D7;">helloworld 分类</div>
+  </div>
+  <!-- 每一篇文章卡片 -->
+  <!-- hash算法 -->
+
+<section class="posts">
+  
+    
+    <article class="post reveal" style="flex-direction: row-reverse;   ">
+      <div class="post-main">
+        <div class="post-info">
+          <div class="post-time">
+            <i class="fas fa-clock" aria-hidden="true"></i>
+            <span class="post-time">2022-03-18</span>
+          </div>
+          <div class="post-title">
+            <a class="post-title-link" href="/2022/03/18/hello-world/">Hello World</a>
+          </div>
+          <div class="post-meta">
+            <div class="post-tags">
+              <!-- 文章详情页的标签 -->
+
+    <i class="iconfont icontag"></i>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hello/" rel="tag">hello</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/" rel="tag">html</a></li></ul>
+
             </div>
-            <div class="tag-chips">
-                
-                
-                <a href="/tags/hello/" title="hello: 1">
-                    <span class="tag-content"
-                        title="hello" style="background-color: #FFF;">hello
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/html/" title="html: 1">
-                    <span class="tag-content"
-                        title="html" style="background-color: #FEF9E7;">html
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
+            <div class="post-categories">
+              <!-- 文章详情页的分类 -->
+
+<div class="article-category">
+  <i class="iconfont iconbookmark1"></i>
+  <a class="article-category-link" href="/categories/helloworld/">helloworld</a>
+</div>
+
+
             </div>
+          </div>
+          <div class="post-img-mobile">
+            <a href="/2022/03/18/hello-world/" style="background-size: cover; 
+              background-position: center center;">
+              <img class="lazyload lazyload placeholder" src="/medias/r-1.jpg" class="lazyload placeholder" data-srcset="/medias/r-1.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
+            </a>
+          </div>
+          <div class="post-content">
+            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
+          </div>
         </div>
-    </div>
+        <div class="post-more">
+          <a href="/2022/03/18/hello-world/">
+            <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
+          </a>
+        </div>
+      </div>
+      <div class="post-img">
+        <a href="/2022/03/18/hello-world/" style="background-size: cover; 
+          background-position: center center;">
+          <img class="lazyload lazyload placeholder" src="/medias/r-1.jpg" class="lazyload placeholder" data-srcset="/medias/r-1.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
+        </a>
+      </div>
+    </article>
+  
+</section>
+</div>
+<div class="w-70">
+  
 </div>
 
       </main>
