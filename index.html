@@ -648,36 +648,6 @@
   <swiper v-cloak ref="mySwiper" :options="swiperOptions" @slideChangeTransitionEnd="slideChangeTransitionEnd">
     
       
-        <swiper-slide>
-          <div class="item swiper-lazy" data-background="https://img11.360buyimg.com/ddimg/jfs/t1/160978/33/20686/2476596/6083e62dEa588862b/63f8f2163ab61b2f.png" style="background-size: 300000px; 
-            background-position: left center;" style="position: relative;">
-            <div class="swiper-bgmask" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
-              <div class="flag">
-                
-                <div class="img-mask swiper-lazy swiper-default-bgImg" data-background="https://img11.360buyimg.com/ddimg/jfs/t1/160978/33/20686/2476596/6083e62dEa588862b/63f8f2163ab61b2f.png" style="height: 100%; background-size: cover; 
-                  background-position: center center;">
-                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>   
-                </div>
-                <div class="flag-text">
-                  <div class="flag-text-content">
-                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">Sakura501的个人小站</div>
-                    
-                      <div  class="ani animated default-excerpt" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">
-                        <vue-typed-js :strings="defaultDesc" :loop="defaultDescTypedLoop" :type-speed="100" :back-speed="50">
-                          <h1 class="typing"></h1>
-                        </vue-typed-js>
-                      </div>
-                      
-                  </div>
-                  <div style="display: flex;" class="flag-text-btns">
-                    
-                    
-                  </div>
-                </div>
-              </div>
-          </div>
-        </swiper-slide>
-      
       
         
         
@@ -784,7 +754,7 @@
 <script>
   var autoplay = JSON.parse('false');
   var delay = '5000';
-  var loop = JSON.parse('true') ? false : JSON.parse('true');
+  var loop = JSON.parse('false') ? false : JSON.parse('true');
   var effect = 'slide';
   var swiperLength = parseInt(document.querySelector(".swiper-length").innerText);
   var defaultDesc = '欢迎欢迎！';
@@ -1909,7 +1879,7 @@ date: 2020
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Sun Mar 20 2022 15:44:27 GMT+0800 (中国标准时间)</div>
+            <div id="last-update" style="display: none;">Sun Mar 20 2022 16:38:27 GMT+0800 (中国标准时间)</div>
             <div id="last-update-show">2022-03-20 日</div>
           
         </div>
