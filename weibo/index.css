@@ -1,0 +1,32 @@
+widget_library_sticky:
+  - class_name: testWidget
+    id_name: testWidget
+    order: -1
+    name: 微博热搜
+    icon: fab fa-weibo
+    icon_color: '#d63130'
+    url: http://baidu.com
+    background: '#fff'
+    html: '
+      <div id="myWeibo">
+
+      <!-- 如果不要滚动，则去掉 vue-seamless-scroll标签就行了，这个插件使用cdn向左向右滚动好像有问题 -->
+
+        <vue-seamless-scroll
+          :data="content"
+          :class-option="classOption"
+          class="warp"
+        >
+          <div class="weibo-container" v-for="(item, index) in content" :key="index">
+            <div class="left">
+              <div class="order" :class="{ red: index<=2 }">NaN</div>
+              <div class="name"><a :href="item.url" target="_blank"></a></div>
+            </div>
+            <div class="hot"></div>
+          </div>
+        </vue-seamless-scroll>
+      </div>
+
+      <script src="/weibo/index.js"></script>
+      <link href="/weibo/index.css" rel="stylesheet">
+    '
