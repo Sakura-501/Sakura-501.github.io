@@ -721,11 +721,11 @@
       
         <div class="post-detail-header_wordcount">
           <span class="totalcount">
-            <i class="fas fa-file-text-o"></i> 字数统计: 193 |
+            <i class="fas fa-file-text-o"></i> 字数统计: 1.6k |
           </span>
   
           <span class="min2read">
-            <i class="fas fa-clock"></i> 阅读时长: 1分钟 |
+            <i class="fas fa-clock"></i> 阅读时长: 6分钟 |
           </span>
   
           
@@ -753,11 +753,207 @@
     <article class="post post-detail">
       <div class="post-content">
         <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>其实很早就接触<code>正则表达式</code>了，知识一直没有系统学习，总是记了一部分就会忘记，所以这一次记录一下学习的过程。  学习的网站是：<a target="_blank" rel="noopener" href="https://www.runoob.com/regexp/regexp-syntax.html">菜鸟教程的正则表达式教学</a>(所以可能都是复制粘贴，经典CV大法hhhhh</p>
-<h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><ul>
+<h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><ul>
 <li><strong>runoo+b</strong>，可以匹配 <strong>runoob、runooob、runoooooob</strong> 等，**+** 号代表前面的字符必须至少出现一次（1次或多次）。</li>
 <li><strong>runoo*b</strong>，可以匹配 <strong>runob、runoob、runoooooob</strong> 等，***** 号代表前面的字符可以不出现，也可以出现一次或者多次（0次、或1次、或多次）。</li>
 <li><strong>colou?r</strong> 可以匹配 <strong>color</strong> 或者 <strong>colour</strong>，**?** 问号代表前面的字符最多只可以出现一次（0次或1次）。</li>
 </ul>
+<p><code>/[^aeiou]/</code>匹配除了 <strong>[…]</strong> 中字符的所有字符，例如 <strong>[^aeiou]</strong> 匹配字符串 “google runoob taobao” 中除了 e o u a 字母的所有字母。  </p>
+<p><code>/[A-Z]/g</code> 表示一个区间，匹配所有大写字母，[a-z] 表示所有小写字母。    </p>
+<p><code>/./g</code>  匹配除换行符<code>（\n、\r）</code>之外的任何单个字符，相等于<code> [^\n\r]</code>。  </p>
+<p><code>/[\s\S]/g</code>  匹配所有。<code>\s </code>是匹配所有空白符，包括换行，<code>\S </code>非空白符，不包括换行。  </p>
+<p><code>/[\w]/</code>  匹配字母、数字、下划线。等价于<code> [A-Za-z0-9_]</code>  </p>
+<h4 id="特殊字符"><a href="#特殊字符" class="headerlink" title="特殊字符"></a>特殊字符</h4><table>
+<thead>
+<tr>
+<th align="left">特别字符</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">$</td>
+<td align="left">匹配输入字符串的结尾位置。如果设置了 RegExp 对象的 Multiline 属性，则 $ 也匹配 ‘\n’ 或 ‘\r’。要匹配 $ 字符本身，请使用 $。</td>
+</tr>
+<tr>
+<td align="left">( )</td>
+<td align="left">标记一个子表达式的开始和结束位置。子表达式可以获取供以后使用。要匹配这些字符，请使用 ( 和 )。</td>
+</tr>
+<tr>
+<td align="left">*</td>
+<td align="left">匹配前面的子表达式零次或多次。要匹配 * 字符，请使用<code> \*</code>。</td>
+</tr>
+<tr>
+<td align="left">+</td>
+<td align="left">匹配前面的子表达式一次或多次。要匹配 + 字符，请使用 <code>\+</code>。</td>
+</tr>
+<tr>
+<td align="left">.</td>
+<td align="left">匹配除换行符 \n 之外的任何单字符。要匹配 . ，请使用<code>\.</code>。</td>
+</tr>
+<tr>
+<td align="left">[</td>
+<td align="left">标记一个中括号表达式的开始。要匹配 [，请使用<code> \[</code>。</td>
+</tr>
+<tr>
+<td align="left">?</td>
+<td align="left">匹配前面的子表达式零次或一次，或指明一个非贪婪限定符。要匹配 ? 字符，请使用<code> \?</code>。</td>
+</tr>
+<tr>
+<td align="left">\</td>
+<td align="left">将下一个字符标记为或特殊字符、或原义字符、或向后引用、或八进制转义符。例如， ‘n’ 匹配字符 ‘n’。’\n’ 匹配换行符。序列 ‘\‘ 匹配 “&quot;，而 ‘(‘ 则匹配 “(“。</td>
+</tr>
+<tr>
+<td align="left">^</td>
+<td align="left"><strong>匹配输入字符串的开始位置，除非在方括号表达式中使用，当该符号在方括号表达式中使用时，表示不接受该方括号表达式中的字符集合</strong>。要匹配 ^ 字符本身，请使用 <code>\^</code>。</td>
+</tr>
+<tr>
+<td align="left">{</td>
+<td align="left">标记限定符表达式的开始。要匹配 {，请使用<code> \&#123;</code>。</td>
+</tr>
+<tr>
+<td align="left">|</td>
+<td align="left">指明两项之间的一个选择。要匹配 |，请使用 <code>|</code>。</td>
+</tr>
+</tbody></table>
+<h4 id="限定符"><a href="#限定符" class="headerlink" title="限定符"></a>限定符</h4><table>
+<thead>
+<tr>
+<th align="left">字符</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">*</td>
+<td align="left">匹配前面的子表达式零次或多次。例如，zo* 能匹配 “z” 以及 “zoo”。* 等价于{0,}。</td>
+</tr>
+<tr>
+<td align="left">+</td>
+<td align="left">匹配前面的子表达式一次或多次。例如，’zo+’ 能匹配 “zo” 以及 “zoo”，但不能匹配 “z”。+ 等价于 {1,}。</td>
+</tr>
+<tr>
+<td align="left">?</td>
+<td align="left">匹配前面的子表达式零次或一次。例如，”do(es)?” 可以匹配 “do” 、 “does” 中的 “does” 、 “doxy” 中的 “do” 。? 等价于 {0,1}。</td>
+</tr>
+<tr>
+<td align="left">{n}</td>
+<td align="left">n 是一个非负整数。匹配确定的 n 次。例如，’o{2}’ 不能匹配 “Bob” 中的 ‘o’，但是能匹配 “food” 中的两个 o。</td>
+</tr>
+<tr>
+<td align="left">{n,}</td>
+<td align="left">n 是一个非负整数。至少匹配n 次。例如，’o{2,}’ 不能匹配 “Bob” 中的 ‘o’，但能匹配 “foooood” 中的所有 o。’o{1,}’ 等价于 ‘o+’。’o{0,}’ 则等价于 ‘o*’。</td>
+</tr>
+<tr>
+<td align="left">{n,m}</td>
+<td align="left">m 和 n 均为非负整数，其中n &lt;&#x3D; m。最少匹配 n 次且最多匹配 m 次。例如，”o{1,3}” 将匹配 “fooooood” 中的前三个 o。’o{0,1}’ 等价于 ‘o?’。请注意在逗号和两个数之间不能有空格。</td>
+</tr>
+</tbody></table>
+<h4 id="定位符"><a href="#定位符" class="headerlink" title="定位符"></a>定位符</h4><table>
+<thead>
+<tr>
+<th align="left">字符</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">^</td>
+<td align="left">匹配输入字符串开始的位置。如果设置了 RegExp 对象的 Multiline 属性，^ 还会与 \n 或 \r 之后的位置匹配。</td>
+</tr>
+<tr>
+<td align="left">$</td>
+<td align="left">匹配输入字符串结尾的位置。如果设置了 RegExp 对象的 Multiline 属性，$ 还会与 \n 或 \r 之前的位置匹配。</td>
+</tr>
+<tr>
+<td align="left">\b</td>
+<td align="left">匹配一个单词边界，即字与空格间的位置。</td>
+</tr>
+<tr>
+<td align="left">\B</td>
+<td align="left">非单词边界匹配。</td>
+</tr>
+</tbody></table>
+<h4 id="选择"><a href="#选择" class="headerlink" title="选择"></a>选择</h4><p>用圆括号 <strong>()</strong> 将所有选择项括起来，相邻的选择项之间用 <strong>|</strong> 分隔。  </p>
+<p><strong>()</strong> 表示捕获分组，**()** 会把每个分组里的匹配的值保存起来， 多个匹配值可以通过数字 n 来查看(<strong>n</strong> 是一个数字，表示第 n 个捕获组的内容)。  </p>
+<p>但用圆括号会有一个副作用，使相关的匹配会被缓存，此时可用 <strong>?:</strong> 放在第一个选项前来消除这种副作用。</p>
+<p>其中 <strong>?:</strong> 是非捕获元之一，还有两个非捕获元是 <strong>?&#x3D;</strong> 和 **?!**，这两个还有更多的含义，前者为正向预查，在任何开始匹配圆括号内的正则表达式模式的位置来匹配搜索字符串，后者为负向预查，在任何开始不匹配该正则表达式模式的位置来匹配搜索字符串。</p>
+<p><img src="https://www.runoob.com/wp-content/uploads/2014/03/366574CC-3706-4B4C-8782-1BFF4CF57582.jpg" class="lazyload placeholder" data-srcset="https://www.runoob.com/wp-content/uploads/2014/03/366574CC-3706-4B4C-8782-1BFF4CF57582.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg"></p>
+<p>**exp1(?&#x3D;exp2)**：查找 exp2 前面的 exp1。</p>
+<h3 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符"></a>修饰符</h3><table>
+<thead>
+<tr>
+<th align="left">修饰符</th>
+<th align="left">含义</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">i</td>
+<td align="left">ignore - 不区分大小写</td>
+<td align="left">将匹配设置为不区分大小写，搜索时不区分大小写: A 和 a 没有区别。</td>
+</tr>
+<tr>
+<td align="left">g</td>
+<td align="left">global - 全局匹配</td>
+<td align="left">查找所有的匹配项。</td>
+</tr>
+<tr>
+<td align="left">m</td>
+<td align="left">multi line - 多行匹配</td>
+<td align="left">使边界字符 <strong>^</strong> 和 <strong>$</strong> 匹配每一行的开头和结尾，记住是多行，而不是整个字符串的开头和结尾。</td>
+</tr>
+<tr>
+<td align="left">s</td>
+<td align="left">特殊字符圆点 <strong>.</strong> 中包含换行符 <strong>\n</strong></td>
+<td align="left">默认情况下的圆点 <strong>.</strong> 是 匹配除换行符 <strong>\n</strong> 之外的任何字符，加上 <strong>s</strong> 修饰符之后, <strong>.</strong> 中包含换行符 \n。</td>
+</tr>
+</tbody></table>
+<h3 id="元字符"><a href="#元字符" class="headerlink" title="元字符"></a>元字符</h3><table>
+<thead>
+<tr>
+<th align="left">\d</th>
+<th>匹配一个数字字符。等价于 [0-9]。</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">\D</td>
+<td>匹配一个非数字字符。等价于 <code>[^0-9]</code>。</td>
+</tr>
+<tr>
+<td align="left">\f</td>
+<td>匹配一个换页符。等价于 \x0c 和 \cL。</td>
+</tr>
+<tr>
+<td align="left">\n</td>
+<td>匹配一个换行符。等价于 \x0a 和 \cJ。</td>
+</tr>
+<tr>
+<td align="left">\r</td>
+<td>匹配一个回车符。等价于 \x0d 和 \cM。</td>
+</tr>
+<tr>
+<td align="left">\s</td>
+<td>匹配任何空白字符，包括空格、制表符、换页符等等。等价于 <code>[ \f\n\r\t\v]</code>。</td>
+</tr>
+<tr>
+<td align="left">\S</td>
+<td>匹配任何非空白字符。等价于<code>[^ \f\n\r\t\v]</code>。</td>
+</tr>
+<tr>
+<td align="left">\t</td>
+<td>匹配一个制表符。等价于 \x09 和 \cI。</td>
+</tr>
+<tr>
+<td align="left">\v</td>
+<td>匹配一个垂直制表符。等价于 \x0b 和 \cK。</td>
+</tr>
+<tr>
+<td align="left">\w</td>
+<td>匹配字母、数字、下划线。等价于<code>&#39;[A-Za-z0-9_]&#39;</code>。</td>
+</tr>
+<tr>
+<td align="left">\W</td>
+<td>匹配非字母、数字、下划线。等价于<code> &#39;[^A-Za-z0-9_]&#39;</code>。</td>
+</tr>
+</tbody></table>
 
       </div>
       <div class="post-tags-categories">
