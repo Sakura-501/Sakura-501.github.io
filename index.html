@@ -310,16 +310,27 @@
           
             <li class="drawer-box-content_item" style="position: relative;">
               
-                <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(6)">
+                <a href="/kpop" class="drawer-menu-item-link">
+                  
+                    <i class="fas fa-music" aria-hidden="true"></i>
+                  
+                  <span class="name">Kpop</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(7)">
                   <span>
                     
                       <i class="fas fa-link"></i>
                     
                     <span class="name">更多</span>
                   </span>
-                  <i class="fas fa-chevron-left arrow " :class="{'icon-rotate': isOpen(6)}" aria-hidden="true"></i>
+                  <i class="fas fa-chevron-left arrow " :class="{'icon-rotate': isOpen(7)}" aria-hidden="true"></i>
                 </a>
-                <ul class="drawer-sub-menu" v-if="isOpen(6)">
+                <ul class="drawer-sub-menu" v-if="isOpen(7)">
                   
                   <li>
                     <a href="/gallery">
@@ -490,11 +501,22 @@
           
             <li class="menu-item" style="position: relative;">
               
-                <a href="/friends" class="menu-item-link" title="友情链接">
+                <a href="/friends" class="menu-item-link" title="友链">
                   
                     <i class="fas fa-users" aria-hidden="true"></i>
                   
-                  <span class="name">友情链接</span>
+                  <span class="name">友链</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/kpop" class="menu-item-link" title="Kpop">
+                  
+                    <i class="fas fa-music" aria-hidden="true"></i>
+                  
+                  <span class="name">Kpop</span>
                 </a>
               
             </li>
@@ -2032,7 +2054,7 @@ date: 2020
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Mon Mar 21 2022 19:35:43 GMT+0800 (中国标准时间)</div>
+            <div id="last-update" style="display: none;">Mon Mar 21 2022 20:44:46 GMT+0800 (中国标准时间)</div>
             <div id="last-update-show">2022-03-21 日</div>
           
         </div>

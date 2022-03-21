@@ -310,16 +310,27 @@
           
             <li class="drawer-box-content_item" style="position: relative;">
               
-                <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(6)">
+                <a href="/kpop" class="drawer-menu-item-link">
+                  
+                    <i class="fas fa-music" aria-hidden="true"></i>
+                  
+                  <span class="name">Kpop</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(7)">
                   <span>
                     
                       <i class="fas fa-link"></i>
                     
                     <span class="name">更多</span>
                   </span>
-                  <i class="fas fa-chevron-left arrow " :class="{'icon-rotate': isOpen(6)}" aria-hidden="true"></i>
+                  <i class="fas fa-chevron-left arrow " :class="{'icon-rotate': isOpen(7)}" aria-hidden="true"></i>
                 </a>
-                <ul class="drawer-sub-menu" v-if="isOpen(6)">
+                <ul class="drawer-sub-menu" v-if="isOpen(7)">
                   
                   <li>
                     <a href="/gallery">
@@ -490,11 +501,22 @@
           
             <li class="menu-item" style="position: relative;">
               
-                <a href="/friends" class="menu-item-link" title="友情链接">
+                <a href="/friends" class="menu-item-link" title="友链">
                   
                     <i class="fas fa-users" aria-hidden="true"></i>
                   
-                  <span class="name">友情链接</span>
+                  <span class="name">友链</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/kpop" class="menu-item-link" title="Kpop">
+                  
+                    <i class="fas fa-music" aria-hidden="true"></i>
+                  
+                  <span class="name">Kpop</span>
                 </a>
               
             </li>
@@ -730,6 +752,22 @@
                 </a>
                 
                 
+                <a href="/tags/hello/" title="hello: 1">
+                    <span class="tag-content"
+                        title="hello" style="background-color: #FFF;">hello
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/html/" title="html: 1">
+                    <span class="tag-content"
+                        title="html" style="background-color: #FEF9E7;">html
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
                 <a href="/tags/hexo/" title="hexo: 1">
                     <span class="tag-content"
                         title="hexo" style="background-color: #FFF;">hexo
@@ -749,22 +787,6 @@
                 <a href="/tags/front-matter/" title="front-matter: 1">
                     <span class="tag-content"
                         title="front-matter" style="background-color: #D5F5E3;">front-matter
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/hello/" title="hello: 1">
-                    <span class="tag-content"
-                        title="hello" style="background-color: #FFF;">hello
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/html/" title="html: 1">
-                    <span class="tag-content"
-                        title="html" style="background-color: #FEF9E7;">html
                         <span class="tag-length">1</span>
                     </span>
                 </a>
