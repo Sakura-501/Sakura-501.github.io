@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>关于github本地项目提交</title>
+      <link href="/2022/03/22/guan-yu-github-ben-di-xiang-mu-ti-jiao/"/>
+      <url>/2022/03/22/guan-yu-github-ben-di-xiang-mu-ti-jiao/</url>
+      
+        <content type="html"><![CDATA[<h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h3><p><code>github</code>项目提交的步骤总是会忘记，所以开一篇文章来记录一下，仅记录最简单的第一种方式。  </p><p>查阅的文章：<a href="https://www.cnblogs.com/du-hong/p/9921214.html">Git的使用–如何将本地项目上传到Github（三种简单、方便的方法）</a>  </p><h3 id="第一种方式"><a href="#第一种方式" class="headerlink" title="第一种方式"></a>第一种方式</h3><p>首先本地下载安装git工具  </p><p>登录<code>github</code>，<code>new repository</code> 新建一个新的项目  </p><p>记得新建完项目之后，copy一下<code>https</code>的项目地址  </p><p>然后来到本地操作，来到项目文件夹，右键git bash here 打开命令行  </p><p><code>git clone 项目名称</code> 把仓库克隆到本地上面  </p><p>再把自己项目的所有文件copy到刚刚建立的仓库文件夹  </p><p><code>cd</code>到仓库文件夹  </p><p>接下来依次输入一下代码即可完成剩余操作：  </p><p><code>git add *</code>  </p><p><code>git commit -m &quot;备注的提交信息&quot;</code>  </p><p><code>git push -u origin main（这个是你分支的名称）</code></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> github </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> github </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>RegExp学习</title>
       <link href="/2022/03/20/regexp-xue-xi/"/>
       <url>/2022/03/20/regexp-xue-xi/</url>

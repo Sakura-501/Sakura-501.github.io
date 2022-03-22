@@ -6,7 +6,7 @@
   <link href="http://sakura-501.github.io/atom.xml" rel="self"/>
   
   <link href="http://sakura-501.github.io/"/>
-  <updated>2022-03-22T00:13:53.521Z</updated>
+  <updated>2022-03-22T11:52:20.219Z</updated>
   <id>http://sakura-501.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于github本地项目提交</title>
+    <link href="http://sakura-501.github.io/2022/03/22/guan-yu-github-ben-di-xiang-mu-ti-jiao/"/>
+    <id>http://sakura-501.github.io/2022/03/22/guan-yu-github-ben-di-xiang-mu-ti-jiao/</id>
+    <published>2022-03-22T11:34:48.000Z</published>
+    <updated>2022-03-22T11:52:20.219Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h3&gt;&lt;p&gt;&lt;code&gt;github&lt;/code&gt;项目提交的步骤总是会忘记，所以开一篇文章来记录一下，仅记录最简单的第一种方式。 </summary>
+        
+      
+    
+    
+    
+    <category term="github" scheme="http://sakura-501.github.io/categories/github/"/>
+    
+    
+    <category term="github" scheme="http://sakura-501.github.io/tags/github/"/>
+    
+  </entry>
   
   <entry>
     <title>RegExp学习</title>
