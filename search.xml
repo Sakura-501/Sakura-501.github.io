@@ -8,7 +8,7 @@
       <link href="/2022/03/23/shu-zhuang-shu-zu-xue-xi/"/>
       <url>/2022/03/23/shu-zhuang-shu-zu-xue-xi/</url>
       
-        <content type="html"><![CDATA[<h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h3><p><del>做了一道大水题</del>，挺有趣的，做不出来百度到可以使用<code>树状数组</code>或者<code>线段树</code>来解答，于是选择了实现起来比较简单的树状数组来解题。一开始思考了很久，想不通为啥可以使用树状数组就能解出来，逛了会b站回来就想通了（<del>逆大天</del>），在此感谢<code>xenny</code>大佬的<a href="https://www.cnblogs.com/xenny/p/9739600.html">树状数组详解</a>，帮助我学习到了一个<code>全新的知识点</code>😇。</p><h3 id="树状数组"><a href="#树状数组" class="headerlink" title="树状数组"></a>树状数组</h3><p>先来谈谈树状数组：就是拿数组来模拟树形的结构，可以解决大部分区间更新以及求和的问题。  </p><p>先看看具体的例子：  </p><p><img src="/'_images/tree-array.png'" class="lazyload placeholder" data-srcset="/'_images/tree-array.png'" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg"></p>]]></content>
+        <content type="html"><![CDATA[<h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h3><p><del>做了一道大水题</del>，挺有趣的，做不出来百度到可以使用<code>树状数组</code>或者<code>线段树</code>来解答，于是选择了实现起来比较简单的树状数组来解题。一开始思考了很久，想不通为啥可以使用树状数组就能解出来，逛了会b站回来就想通了（<del>逆大天</del>），在此感谢<code>xenny</code>大佬的<a href="https://www.cnblogs.com/xenny/p/9739600.html">树状数组详解</a>，帮助我学习到了一个<code>全新的知识点</code>😇。</p><h3 id="树状数组"><a href="#树状数组" class="headerlink" title="树状数组"></a>树状数组</h3><p>先来谈谈树状数组：就是拿数组来模拟树形的结构，可以解决大部分区间更新以及求和的问题。  </p><p>先看看具体的例子：  </p><p><img src="/images/tree-array.png" class="lazyload placeholder" data-srcset="/images/tree-array.png" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg"></p>]]></content>
       
       
       <categories>
