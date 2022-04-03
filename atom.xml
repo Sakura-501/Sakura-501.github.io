@@ -6,7 +6,7 @@
   <link href="http://sakura-501.github.io/atom.xml" rel="self"/>
   
   <link href="http://sakura-501.github.io/"/>
-  <updated>2022-03-30T07:48:46.166Z</updated>
+  <updated>2022-04-03T02:51:46.459Z</updated>
   <id>http://sakura-501.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>利用gconv_modules和iconv进行bypass disablele_function</title>
+    <link href="http://sakura-501.github.io/2022/04/03/li-yong-gconv-modules-he-iconv-jin-xing-bypass-disablele-function/"/>
+    <id>http://sakura-501.github.io/2022/04/03/li-yong-gconv-modules-he-iconv-jin-xing-bypass-disablele-function/</id>
+    <published>2022-04-03T01:07:11.000Z</published>
+    <updated>2022-04-03T02:51:46.459Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;本文主要内容来源于&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/qq_42303523/article/details/117911859&quot;&gt;使用GCONV_PATH与iconv进行bypass</summary>
+        
+      
+    
+    
+    
+    <category term="web" scheme="http://sakura-501.github.io/categories/web/"/>
+    
+    
+    <category term="ctf" scheme="http://sakura-501.github.io/tags/ctf/"/>
+    
+    <category term="php" scheme="http://sakura-501.github.io/tags/php/"/>
+    
+  </entry>
   
   <entry>
     <title>耗时一星期水了一个铜奖</title>
