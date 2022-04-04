@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>PHPSTORM如何进行项目的debug</title>
+      <link href="/2022/04/04/phpstorm-ru-he-jin-xing-xiang-mu-de-debug/"/>
+      <url>/2022/04/04/phpstorm-ru-he-jin-xing-xiang-mu-de-debug/</url>
+      
+        <content type="html"><![CDATA[<h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h3><p>因为要进行wordpress的cve复现，所以需要对某些代码进行debug，可以理解的更快一些，所以查询到PHPstorm可以利用xdebug来进行项目的debug，所以尝试了好长一段时间，终于算是成功了。</p><h3 id="借鉴文章"><a href="#借鉴文章" class="headerlink" title="借鉴文章"></a>借鉴文章</h3><p><a href="https://blog.csdn.net/weixin_39988164/article/details/116510119">https://blog.csdn.net/weixin_39988164/article/details/116510119</a></p><p><a href="https://ask.csdn.net/questions/781008">https://ask.csdn.net/questions/781008</a></p><p><a href="http://i.lckiss.com/?p=4370">http://i.lckiss.com/?p=4370</a></p><p><a href="https://blog.csdn.net/maxwoods/article/details/80458374">https://blog.csdn.net/maxwoods/article/details/80458374</a></p><p>还有一些比较坑的点：</p><p>xdebug断掉调试经常无故断开：</p><p><a href="https://blog.csdn.net/qq_26486949/article/details/88857757">https://blog.csdn.net/qq_26486949/article/details/88857757</a></p><p><a href="https://blog.csdn.net/qq_41566366/article/details/100898604">https://blog.csdn.net/qq_41566366/article/details/100898604</a></p><p>查阅以上文章，加上根据自己的本地环境进行一些更改之后，就基本可以进行debug了，大功告成！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> web </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> php </tag>
+            
+            <tag> debug </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>利用gconv_modules和iconv进行bypass disablele_function</title>
       <link href="/2022/04/03/li-yong-gconv-modules-he-iconv-jin-xing-bypass-disablele-function/"/>
       <url>/2022/04/03/li-yong-gconv-modules-he-iconv-jin-xing-bypass-disablele-function/</url>
