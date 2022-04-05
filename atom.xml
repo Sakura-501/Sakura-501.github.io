@@ -6,7 +6,7 @@
   <link href="http://sakura-501.github.io/atom.xml" rel="self"/>
   
   <link href="http://sakura-501.github.io/"/>
-  <updated>2022-04-04T13:13:26.032Z</updated>
+  <updated>2022-04-05T14:33:08.212Z</updated>
   <id>http://sakura-501.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CVE-2020-24186复现</title>
+    <link href="http://sakura-501.github.io/2022/04/05/cve-2020-24186-fu-xian/"/>
+    <id>http://sakura-501.github.io/2022/04/05/cve-2020-24186-fu-xian/</id>
+    <published>2022-04-05T14:14:35.000Z</published>
+    <updated>2022-04-05T14:33:08.212Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;WordPress评论插件wpDiscuz任意文件上传漏洞&quot;&gt;&lt;a href=&quot;#WordPress评论插件wpDiscuz任意文件上传漏洞&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="web" scheme="http://sakura-501.github.io/categories/web/"/>
+    
+    
+    <category term="php" scheme="http://sakura-501.github.io/tags/php/"/>
+    
+    <category term="cve" scheme="http://sakura-501.github.io/tags/cve/"/>
+    
+  </entry>
   
   <entry>
     <title>PHPSTORM如何进行项目的debug</title>
