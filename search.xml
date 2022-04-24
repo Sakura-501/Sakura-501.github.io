@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Wordpress分析</title>
+      <link href="/2022/04/24/wordpress-fen-xi/"/>
+      <url>/2022/04/24/wordpress-fen-xi/</url>
+      
+        <content type="html"><![CDATA[<h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h3><p>wordpress学习信息主要来自<a href="https://book.hacktricks.xyz/pentesting/pentesting-web/wordpress#basic-information">HackTricks</a></p><h3 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h3><p>Themes files can be found in<code>/wp-content/themes/</code></p><p>For example: Using <strong>theme twentytwelve</strong> you can <strong>access</strong> the <strong>404.php</strong> file in**:** <strong>&#x2F;wp-content&#x2F;themes&#x2F;twentytwelve&#x2F;404.php</strong></p><p>Another useful url could be: <strong>&#x2F;wp-content&#x2F;themes&#x2F;default&#x2F;404.php</strong></p><p>In <strong>wp-config.php</strong> you can find the root password of the database.</p><p>Default login paths to check: *** &#x2F;wp-login.php, &#x2F;wp-login&#x2F;, &#x2F;wp-admin&#x2F;, &#x2F;wp-admin.php, &#x2F;login&#x2F;\ ***</p><h3 id="主要文件"><a href="#主要文件" class="headerlink" title="主要文件"></a>主要文件</h3><p><code>index.php,license.txt</code></p><p><code>wp-activate.php</code> is used for the email activation process when setting up a new WordPress site.</p><pre class="line-numbers language-none"><code class="language-none">Login folders:&#x2F;wp-admin&#x2F;login.php&#x2F;wp-admin&#x2F;wp-login.php&#x2F;login.php&#x2F;wp-login.php<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p><code>xmlrpc.php</code>（一个文件，使用HTTP相应码知识API错误）</p><p>is a file that represents a feature of WordPress that enables data to be transmitted with HTTP acting as the transport mechanism and XML as the encoding mechanism. This type of communication has been replaced by the WordPress <a href="https://developer.wordpress.org/rest-api/reference">REST API</a>.</p><p>The <code>wp-content</code> folder is the main directory where plugins and themes are stored.</p><p><code>wp-content/uploads/</code> Is the directory where any files uploaded to the platform are stored.</p><p><code>wp-includes/</code> This is the directory where core files are stored, such as certificates, fonts, JavaScript files, and widgets.</p><p>The <code>wp-config.php</code> file contains information required by WordPress to connect to the database such as the database name, database host, username and password, authentication keys and salts, and the database table prefix. This configuration file can also be used to activate DEBUG mode, which can useful in troubleshooting.</p><pre class="line-numbers language-none"><code class="language-none">Get Pluginscurl -s -X GET https:&#x2F;&#x2F;wordpress.org&#x2F;support&#x2F;article&#x2F;pages&#x2F; | grep -E &#39;wp-content&#x2F;plugins&#x2F;&#39; | sed -E &#39;s,href&#x3D;|src&#x3D;,THIIIIS,g&#39; | awk -F &quot;THIIIIS&quot; &#39;&#123;print $2&#125;&#39; | cut -d &quot;&#39;&quot; -f2Get Themescurl -s -X GET https:&#x2F;&#x2F;wordpress.org&#x2F;support&#x2F;article&#x2F;pages&#x2F; | grep -E &#39;wp-content&#x2F;themes&#39; | sed -E &#39;s,href&#x3D;|src&#x3D;,THIIIIS,g&#39; | awk -F &quot;THIIIIS&quot; &#39;&#123;print $2&#125;&#39; | cut -d &quot;&#39;&quot; -f2Extract versions in generalcurl -s -X GET https:&#x2F;&#x2F;wordpress.org&#x2F;support&#x2F;article&#x2F;pages&#x2F; | grep http | grep -E &#39;?ver&#x3D;&#39; | sed -E &#39;s,href&#x3D;|src&#x3D;,THIIIIS,g&#39; | awk -F &quot;THIIIIS&quot; &#39;&#123;print $2&#125;&#39; | cut -d &quot;&#39;&quot; -f2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> web </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> web </tag>
+            
+            <tag> wordpress </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>CVE-2020-24186复现</title>
       <link href="/2022/04/05/cve-2020-24186-fu-xian/"/>
       <url>/2022/04/05/cve-2020-24186-fu-xian/</url>

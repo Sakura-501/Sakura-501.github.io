@@ -6,7 +6,7 @@
   <link href="http://sakura-501.github.io/atom.xml" rel="self"/>
   
   <link href="http://sakura-501.github.io/"/>
-  <updated>2022-04-11T14:01:50.367Z</updated>
+  <updated>2022-04-24T14:01:49.131Z</updated>
   <id>http://sakura-501.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Wordpress分析</title>
+    <link href="http://sakura-501.github.io/2022/04/24/wordpress-fen-xi/"/>
+    <id>http://sakura-501.github.io/2022/04/24/wordpress-fen-xi/</id>
+    <published>2022-04-24T13:20:31.000Z</published>
+    <updated>2022-04-24T14:01:49.131Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h3&gt;&lt;p&gt;wordpress学习信息主要来自&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="web" scheme="http://sakura-501.github.io/categories/web/"/>
+    
+    
+    <category term="web" scheme="http://sakura-501.github.io/tags/web/"/>
+    
+    <category term="wordpress" scheme="http://sakura-501.github.io/tags/wordpress/"/>
+    
+  </entry>
   
   <entry>
     <title>CVE-2020-24186复现</title>
