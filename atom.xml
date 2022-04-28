@@ -6,7 +6,7 @@
   <link href="http://sakura-501.github.io/atom.xml" rel="self"/>
   
   <link href="http://sakura-501.github.io/"/>
-  <updated>2022-04-24T14:47:01.882Z</updated>
+  <updated>2022-04-28T15:24:07.641Z</updated>
   <id>http://sakura-501.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>花式构造恶意so文件</title>
+    <link href="http://sakura-501.github.io/2022/04/28/hua-shi-gou-zao-e-yi-so-wen-jian/"/>
+    <id>http://sakura-501.github.io/2022/04/28/hua-shi-gou-zao-e-yi-so-wen-jian/</id>
+    <published>2022-04-28T15:16:27.000Z</published>
+    <updated>2022-04-28T15:24:07.641Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;劫持mysqli&quot;&gt;&lt;a href=&quot;#劫持mysqli&quot; class=&quot;headerlink&quot; title=&quot;劫持mysqli&quot;&gt;&lt;/a&gt;劫持mysqli&lt;/h3&gt;&lt;h4 id=&quot;漏洞代码&quot;&gt;&lt;a href=&quot;#漏洞代码&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="web" scheme="http://sakura-501.github.io/categories/web/"/>
+    
+    
+    <category term="ctf" scheme="http://sakura-501.github.io/tags/ctf/"/>
+    
+    <category term="php" scheme="http://sakura-501.github.io/tags/php/"/>
+    
+  </entry>
   
   <entry>
     <title>Wordpress分析</title>
