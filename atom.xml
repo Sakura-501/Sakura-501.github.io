@@ -6,7 +6,7 @@
   <link href="http://sakura-501.github.io/atom.xml" rel="self"/>
   
   <link href="http://sakura-501.github.io/"/>
-  <updated>2022-04-30T08:01:09.834Z</updated>
+  <updated>2022-04-30T11:00:50.245Z</updated>
   <id>http://sakura-501.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Structs2漏洞</title>
+    <link href="http://sakura-501.github.io/2022/04/30/structs2-lou-dong/"/>
+    <id>http://sakura-501.github.io/2022/04/30/structs2-lou-dong/</id>
+    <published>2022-04-30T10:58:19.000Z</published>
+    <updated>2022-04-30T11:00:50.245Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;structs2漏洞检测工具利用&quot;&gt;&lt;a href=&quot;#structs2漏洞检测工具利用&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="web" scheme="http://sakura-501.github.io/categories/web/"/>
+    
+    
+    <category term="structs2" scheme="http://sakura-501.github.io/tags/structs2/"/>
+    
+    <category term="java" scheme="http://sakura-501.github.io/tags/java/"/>
+    
+  </entry>
   
   <entry>
     <title>laravel5.7反序列化</title>
