@@ -6,7 +6,7 @@
   <link href="http://sakura-501.github.io/atom.xml" rel="self"/>
   
   <link href="http://sakura-501.github.io/"/>
-  <updated>2022-04-29T02:29:00.432Z</updated>
+  <updated>2022-04-30T08:01:09.834Z</updated>
   <id>http://sakura-501.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>laravel5.7反序列化</title>
+    <link href="http://sakura-501.github.io/2022/04/30/laravel5-7-fan-xu-lie-hua/"/>
+    <id>http://sakura-501.github.io/2022/04/30/laravel5-7-fan-xu-lie-hua/</id>
+    <published>2022-04-30T07:56:52.000Z</published>
+    <updated>2022-04-30T08:01:09.834Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;前期准备-amp-参考资料&quot;&gt;&lt;a href=&quot;#前期准备-amp-参考资料&quot; class=&quot;headerlink&quot; title=&quot;前期准备&amp;amp;参考资料&quot;&gt;&lt;/a&gt;前期准备&amp;amp;参考资料&lt;/h3&gt;&lt;h4 id=&quot;composer相关：&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="web" scheme="http://sakura-501.github.io/categories/web/"/>
+    
+    
+    <category term="php" scheme="http://sakura-501.github.io/tags/php/"/>
+    
+    <category term="laravel" scheme="http://sakura-501.github.io/tags/laravel/"/>
+    
+  </entry>
   
   <entry>
     <title>花式构造恶意so文件</title>
