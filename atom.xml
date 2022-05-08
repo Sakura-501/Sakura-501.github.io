@@ -6,7 +6,7 @@
   <link href="http://sakura-501.github.io/atom.xml" rel="self"/>
   
   <link href="http://sakura-501.github.io/"/>
-  <updated>2022-05-01T14:59:11.888Z</updated>
+  <updated>2022-05-08T07:45:51.984Z</updated>
   <id>http://sakura-501.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CVE-2021-29447</title>
+    <link href="http://sakura-501.github.io/2022/05/08/cve-2021-29447/"/>
+    <id>http://sakura-501.github.io/2022/05/08/cve-2021-29447/</id>
+    <published>2022-05-08T07:41:52.000Z</published>
+    <updated>2022-05-08T07:45:51.984Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;WordPress在PHP8下经过身份验证的媒体库XXE漏洞&quot;&gt;&lt;a href=&quot;#WordPress在PHP8下经过身份验证的媒体库XXE漏洞&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="web" scheme="http://sakura-501.github.io/categories/web/"/>
+    
+    
+    <category term="wordpress" scheme="http://sakura-501.github.io/tags/wordpress/"/>
+    
+    <category term="xxe" scheme="http://sakura-501.github.io/tags/xxe/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux下SUID提权</title>
