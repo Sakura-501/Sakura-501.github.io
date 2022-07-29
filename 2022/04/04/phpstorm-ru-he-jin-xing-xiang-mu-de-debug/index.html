@@ -769,7 +769,7 @@
       
         <div class="post-detail-header_wordcount">
           <span class="totalcount">
-            <i class="fas fa-file-text-o"></i> 字数统计: 174 |
+            <i class="fas fa-file-text-o"></i> 字数统计: 283 |
           </span>
   
           <span class="min2read">
@@ -810,6 +810,22 @@
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_26486949/article/details/88857757">https://blog.csdn.net/qq_26486949/article/details/88857757</a></p>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41566366/article/details/100898604">https://blog.csdn.net/qq_41566366/article/details/100898604</a></p>
 <p>查阅以上文章，加上根据自己的本地环境进行一些更改之后，就基本可以进行debug了，大功告成！</p>
+<h3 id="php-ini"><a href="#php-ini" class="headerlink" title="php.ini"></a>php.ini</h3><pre class="line-numbers language-none"><code class="language-none">[Xdebug]
+zend_extension&#x3D;D:&#x2F;phpstudty8.1&#x2F;phpstudy_pro&#x2F;Extensions&#x2F;php&#x2F;php8.0.2nts&#x2F;ext&#x2F;php_xdebug.dll
+xdebug.remote_enable&#x3D;On
+xdebug.remote_host&#x3D;127.0.0.1
+xdebug.remote_port&#x3D;9003
+xdebug.remote_handler&#x3D;dbgp
+xdebug.remote_mode &#x3D; req
+xdebug.mode&#x3D;debug
+xdebug.idekey&#x3D;PHPSTORM
+xdebug.collect_params&#x3D;1
+xdebug.collect_return&#x3D;1
+xdebug.auto_trace&#x3D;Off
+xdebug.trace_output_dir&#x3D;D:&#x2F;phpstudty8.1&#x2F;phpstudy_pro&#x2F;Extensions&#x2F;php_log&#x2F;php8.0.2nts.xdebug.trace
+xdebug.profiler_enable&#x3D;Off
+xdebug.profiler_output_dir&#x3D;D:&#x2F;phpstudty8.1&#x2F;phpstudy_pro&#x2F;Extensions&#x2F;php_log&#x2F;php8.0.2nts.xdebug.profiler<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 
       </div>
       <div class="post-tags-categories">
