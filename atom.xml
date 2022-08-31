@@ -6,7 +6,7 @@
   <link href="http://sakura-501.github.io/atom.xml" rel="self"/>
   
   <link href="http://sakura-501.github.io/"/>
-  <updated>2022-05-16T13:20:50.428Z</updated>
+  <updated>2022-08-31T15:45:59.220Z</updated>
   <id>http://sakura-501.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>写于八九之交的大三上开学</title>
+    <link href="http://sakura-501.github.io/2022/08/31/xie-yu-ba-jiu-zhi-jiao-de-da-san-shang-kai-xue/"/>
+    <id>http://sakura-501.github.io/2022/08/31/xie-yu-ba-jiu-zhi-jiao-de-da-san-shang-kai-xue/</id>
+    <published>2022-08-31T14:59:13.000Z</published>
+    <updated>2022-08-31T15:45:59.220Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="闲言碎语" scheme="http://sakura-501.github.io/categories/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD/"/>
+    
+    
+    <category term="小记" scheme="http://sakura-501.github.io/tags/%E5%B0%8F%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>不同长度字符的命令执行</title>
