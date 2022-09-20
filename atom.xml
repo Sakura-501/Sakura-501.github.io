@@ -138,18 +138,18 @@
   </entry>
   
   <entry>
-    <title>Structs2漏洞</title>
+    <title>Struts2漏洞</title>
     <link href="http://sakura-501.github.io/2022/04/30/structs2-lou-dong/"/>
     <id>http://sakura-501.github.io/2022/04/30/structs2-lou-dong/</id>
     <published>2022-04-30T10:58:19.000Z</published>
-    <updated>2022-04-30T11:00:50.245Z</updated>
+    <updated>2022-09-20T06:55:29.305Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h3 id=&quot;structs2漏洞检测工具利用&quot;&gt;&lt;a href=&quot;#structs2漏洞检测工具利用&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h3 id=&quot;struts2漏洞检测工具利用&quot;&gt;&lt;a href=&quot;#struts2漏洞检测工具利用&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -158,9 +158,9 @@
     <category term="web" scheme="http://sakura-501.github.io/categories/web/"/>
     
     
-    <category term="structs2" scheme="http://sakura-501.github.io/tags/structs2/"/>
-    
     <category term="java" scheme="http://sakura-501.github.io/tags/java/"/>
+    
+    <category term="struts2" scheme="http://sakura-501.github.io/tags/struts2/"/>
     
   </entry>
   
