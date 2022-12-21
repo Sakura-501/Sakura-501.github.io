@@ -791,11 +791,11 @@
       
         <div class="post-detail-header_wordcount">
           <span class="totalcount">
-            <i class="fas fa-file-text-o"></i> 字数统计: 283 |
+            <i class="fas fa-file-text-o"></i> 字数统计: 389 |
           </span>
   
           <span class="min2read">
-            <i class="fas fa-clock"></i> 阅读时长: 1分钟 |
+            <i class="fas fa-clock"></i> 阅读时长: 2分钟 |
           </span>
   
           
@@ -847,6 +847,25 @@ xdebug.auto_trace&#x3D;Off
 xdebug.trace_output_dir&#x3D;D:&#x2F;phpstudty8.1&#x2F;phpstudy_pro&#x2F;Extensions&#x2F;php_log&#x2F;php8.0.2nts.xdebug.trace
 xdebug.profiler_enable&#x3D;Off
 xdebug.profiler_output_dir&#x3D;D:&#x2F;phpstudty8.1&#x2F;phpstudy_pro&#x2F;Extensions&#x2F;php_log&#x2F;php8.0.2nts.xdebug.profiler<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="vhost-conf"><a href="#vhost-conf" class="headerlink" title="vhost.conf"></a>vhost.conf</h3><pre class="line-numbers language-none"><code class="language-none">&lt;VirtualHost *:80&gt;
+    DocumentRoot &quot;D:&#x2F;phpstudy_pro&#x2F;WWW&#x2F;login&quot;
+    ServerName www.1688.net
+    ServerAlias
+    FcgidInitialEnv PHPRC &quot;D:&#x2F;phpstudy_pro&#x2F;Extensions&#x2F;php&#x2F;php-5.6.27-nts&quot;
+    AddHandler fcgid-script .php
+    IPCConnectTimeout 30000
+    IPCCommTimeout 30000
+    FcgidWrapper &quot;D:&#x2F;phpstudy_pro&#x2F;Extensions&#x2F;php&#x2F;php-5.6.27-nts&#x2F;php-cgi.exe&quot; .php
+    &lt;Directory &quot;D:&#x2F;phpstudy_pro&#x2F;WWW&#x2F;login&quot;&gt;
+    Options FollowSymLinks ExecCGI
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+    Require all granted
+    DirectoryIndex index.php index.html
+    &lt;&#x2F;Directory&gt;
+&lt;&#x2F;VirtualHost&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
       </div>
